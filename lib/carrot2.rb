@@ -15,7 +15,8 @@ class Carrot2
     xml.searchresult do |s|
       documents.each do |document|
         s.document do |d|
-          d.title document
+          d.title document[0]
+          d.snippet document[1]
         end
       end
     end
